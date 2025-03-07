@@ -1,5 +1,7 @@
 def login():
-    pass
+    int(input("Student Number: "))
+    input("Password: ")
+    print("Succesfully login!")
 
 def academic_records():
     pass
@@ -13,6 +15,9 @@ def gpa_calculator():
 def student_rep_elections():
     pass
 
-print("Welcome to University Registration")
+print("Welcome to University Registration!")
+login()
+
+
 
 
