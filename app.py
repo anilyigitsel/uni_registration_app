@@ -1,11 +1,16 @@
 def login():
     print("Welcome to University Registration!")
-    int(input("Student Number: "))
+    student_id = int(input("Student Number: "))
     input("Password: ")
     print("Succesfully logged in!")
+    return student_id
 
-def academic_records():
-    pass
+def academic_records(student_id):
+    print("------------")
+    print("Academic Records")
+    print("------------")
+    print(f"Student Number: {student_id}")
+    return student_id
 
 def course_list_preparation():
     pass
@@ -18,7 +23,7 @@ def student_rep_elections():
 
 isRunning = True
 
-login()
+student_id = login()
 
 while isRunning:
     print("------------")
@@ -34,7 +39,7 @@ while isRunning:
     choice = input("Enter your choice (1-6): ")
 
     if choice =="1":
-        academic_records()
+        academic_records(student_id)
     elif choice == "2":
         course_list_preparation()
     elif choice == "3":
@@ -48,12 +53,3 @@ while isRunning:
     else:
         print("Select a valid choice!")
         print()
-
-
-
-
-
-
-
-
-
