@@ -15,8 +15,21 @@ def gpa_calculator():
 def student_rep_elections():
     pass
 
-print("Welcome to University Registration!")
-login()
+isRunning = True
+
+while isRunning:
+    print("Welcome to University Registration!")
+    login()
+    print("Registration")
+    print("------------")
+    print("Enter your choice (1-5): ")
+    print("1. Academic Records")
+    print("2. Course List Preparation")
+    print("3. GPA Calculator")
+    print("4. Student Representative Elections")
+    print("5. Exit")
+
+
 
 
 
