@@ -1,4 +1,5 @@
 def login():
+    print("Welcome to University Registration!")
     int(input("Student Number: "))
     input("Password: ")
     print("Succesfully logged in!")
@@ -15,12 +16,11 @@ def gpa_calculator():
 def student_rep_elections():
     pass
 
-login()
-
 isRunning = True
 
+login()
+
 while isRunning:
-    print("Welcome to University Registration!")
     print("------------")
     print("Registration")
     print("------------")
@@ -29,7 +29,8 @@ while isRunning:
     print("3. GPA Calculator")
     print("4. Student Representative Elections")
     print("5. Logout")
-    print("6. Exit")
+    print("6. Exit ")
+    print() 
     choice = input("Enter your choice (1-6): ")
 
     if choice =="1":
@@ -46,6 +47,7 @@ while isRunning:
         isRunning = False
     else:
         print("Select a valid choice!")
+        print()
 
 
 
