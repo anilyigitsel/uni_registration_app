@@ -1,19 +1,46 @@
 def login():
+    print("-----------------------------------")
     print("Welcome to University Registration!")
     student_id = int(input("Student Number: "))
     input("Password: ")
+    print()
     print("Succesfully logged in!")
+    print()
     return student_id
+
+courses = []
 
 def academic_records(student_id):
     print("------------")
     print("Academic Records")
     print("------------")
     print(f"Student Number: {student_id}")
-    return student_id
+    print("--------")
+    print("Courses")
+    print("--------")
+    if courses:  
+        for index, course in enumerate(courses, start=1):
+            print(f"{index}. {course}")  
+    else:
+        print("No courses registered yet.") 
 
 def course_list_preparation():
-    pass
+    while True:  
+        print("-----------------------")
+        print("Course List Preparation")
+        print("-----------------------")
+        abb = input("Abbreviation: ")
+        code = input("Code: ")  
+        section = input("Section: ")
+        course = f"{abb}{code}.{section}"
+        
+        courses.append(course)  
+        print(f"{course} added successfully!")
+
+        add = input("Do you want to add another course? (y/n): ").lower()
+        if add == "n":
+            break  
+    
 
 def gpa_calculator():
     pass
@@ -47,7 +74,7 @@ while isRunning:
     elif choice == "4":
         student_rep_elections()
     elif choice == "5":
-        login()
+        student_id = login()
     elif choice == "6":
         isRunning = False
     else:
