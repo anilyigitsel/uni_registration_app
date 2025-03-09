@@ -84,7 +84,6 @@ def student_rep_elections():
         print("Invalid input! Please enter 'y' or 'n'.")
         student_rep_elections()  
 
-
 isRunning = True
 
 student_id = login()
