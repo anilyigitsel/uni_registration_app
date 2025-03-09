@@ -40,10 +40,6 @@ def course_list_preparation():
         add = input("Do you want to add another course? (y/n): ").lower()
         if add == "n":
             break  
-    
-
-def gpa_calculator():
-    pass
 
 def student_rep_elections():
     pass
@@ -58,10 +54,9 @@ while isRunning:
     print("------------")
     print("1. Academic Records")
     print("2. Course List Preparation")
-    print("3. GPA Calculator")
-    print("4. Student Representative Elections")
-    print("5. Logout")
-    print("6. Exit ")
+    print("3. Student Representative Elections")
+    print("4. Logout")
+    print("5. Exit ")
     print() 
     choice = input("Enter your choice (1-6): ")
 
@@ -70,12 +65,10 @@ while isRunning:
     elif choice == "2":
         course_list_preparation()
     elif choice == "3":
-        gpa_calculator()
-    elif choice == "4":
         student_rep_elections()
-    elif choice == "5":
+    elif choice == "4":
         student_id = login()
-    elif choice == "6":
+    elif choice == "5":
         isRunning = False
     else:
         print("Select a valid choice!")
