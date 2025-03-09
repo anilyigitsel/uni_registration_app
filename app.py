@@ -41,8 +41,49 @@ def course_list_preparation():
         if add == "n":
             break  
 
+vote_choice = None  
+
 def student_rep_elections():
-    pass
+    global vote_choice  
+
+    first_candidate = "A"
+    second_candidate = "B"
+    third_candidate = "C"
+    forth_candidate = "D"
+
+    print("------------------------------------------")
+    print(f"Welcome to Student Representative Elections")
+    print("------------------------------------------")
+
+    print("Candidates:")
+    print(first_candidate)
+    print(second_candidate)
+    print(third_candidate)
+    print(forth_candidate)
+    print()
+    vote = input("Would you like to vote? (y/n): ").strip().lower()
+    print()
+
+    if vote == "y":
+        if vote_choice is not None:  
+            print("You have already voted.")
+        else:
+            vote_choice = input("Which candidate would you like to vote for?:\n").strip().upper()
+
+            if vote_choice in {first_candidate, second_candidate, third_candidate, forth_candidate}:
+                print("Your vote has been saved successfully.")
+            else:
+                print("Select a valid choice!")
+                vote_choice = None  
+                student_rep_elections()  
+
+    elif vote == "n":
+        print("Exiting the election system.")
+        isRunning
+    else:
+        print("Invalid input! Please enter 'y' or 'n'.")
+        student_rep_elections()  
+
 
 isRunning = True
 
